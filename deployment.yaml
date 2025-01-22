@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: aereportes-mfe
+  labels:
+    app: aereportes-mfe
+    app.kubernetes.io/component: aereportes-mfe
+    app.kubernetes.io/instance: aereportes-mfe
+    app.kubernetes.io/name: aereportes-mfe
+    app.kubernetes.io/part-of: ae-app-frontend
+    app.openshift.io/runtime: aereportes-mfe
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: aereportes-mfe
+  template:
+    metadata:
+      labels:
+        app: aereportes-mfe
+        deployment: aereportes-mfe
+    spec:
+      containers:
+        - name: aereportes-mfe
+#INIIMAGE
+          image: 'image-registry.openshift-image-registry.svc:5000/soporte-colsanitas-dev/aereportes-mfe:latest'
+#FINIMAGE
+          ports:
+            - containerPort: 8080
+              protocol: TCP
+          resources:
+            limits:
+              cpu: 100m
+              memory: 200Mi
+            requests:
+              cpu: 10m
+              memory: 100Mi
+          env:
+            - name: TZ
+              value: "America/Bogota"

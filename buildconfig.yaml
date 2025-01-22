@@ -1,0 +1,27 @@
+apiVersion: build.openshift.io/v1
+kind: BuildConfig
+metadata:
+  name: aereportes-mfe
+  labels:
+    app: aereportes-mfe
+    app.kubernetes.io/component: aereportes-mfe
+    app.kubernetes.io/instance: aereportes-mfe
+    app.kubernetes.io/name: aereportes-mfe
+    app.kubernetes.io/part-of: ae-app-frontend
+    app.openshift.io/runtime: aereportes-mfe
+spec:
+  source:
+    type: Git
+    git:
+#INIGIT
+      uri: "git@github.com:IntegranovaSoporteColSanitas/aereportes-mfe.git"
+      ref: "5.0.0"
+    sourceSecret:
+      name: ae-git-credentials
+#FINGIT
+  strategy:
+    type: Docker
+  output:
+    to:
+      kind: ImageStreamTag
+      name: aereportes-mfe:latest

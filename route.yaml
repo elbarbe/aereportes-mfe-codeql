@@ -1,0 +1,21 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: aereportes-mfe
+  labels:
+    app: aereportes-mfe
+    app.kubernetes.io/component: aereportes-mfe
+    app.kubernetes.io/instance: aereportes-mfe
+    app.kubernetes.io/name: aereportes-mfe
+    app.kubernetes.io/part-of: ae-app-frontend
+    app.openshift.io/runtime: aereportes-mfe
+spec:
+#INIHOST
+#  host: aereportes-mfe-soporte-colsanitas-dev.apps.sandbox-m3.1530.p1.openshiftapps.com
+  host: aereportes-mfe-soporte-colsanitas-dev.apps.rm3.7wse.p1.openshiftapps.com
+#FINHOST
+  to:
+    kind: Service
+    name: aereportes-mfe
+  tls:
+    termination: edge

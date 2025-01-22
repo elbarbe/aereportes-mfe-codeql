@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: aereportes-mfe
+  labels:
+    app: aereportes-mfe
+    app.kubernetes.io/component: aereportes-mfe
+    app.kubernetes.io/instance: aereportes-mfe
+    app.kubernetes.io/name: aereportes-mfe
+    app.kubernetes.io/part-of: ae-app-frontend
+    app.openshift.io/runtime: aereportes-mfe
+spec:
+  selector:
+    app: aereportes-mfe
+  ports:
+    - protocol: TCP
+      port: 8080
+      targetPort: 8080
