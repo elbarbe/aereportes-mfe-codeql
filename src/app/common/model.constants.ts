@@ -131,6 +131,7 @@ export class ModelConstants {
     public static readonly Logdatosdominio = {name : 'LogDatosDominio'};
     public static readonly Contratosexentosfingreso = {name : 'ContratosExentosFIngreso'};
     public static readonly Logcontratosexentosfingreso = {name : 'LogContratosExentosFIngreso'};
+    public static readonly Textoaviso = {name : 'TextoAviso'};
     public static readonly Globalservices = {name : 'GlobalServices', siuutgenfilelegalizacom: 'siu_tgenfilelegalizacom',
         siuutgenfilelegalizacomuout: 'siu_tgenfilelegalizacom_out', siuuogetreportsol: 'siu_ogetreportsol',
         siuuogetreportsoluout: 'siu_ogetreportsol_out', siuuogetreportsolnov: 'siu_ogetreportsolnov',
