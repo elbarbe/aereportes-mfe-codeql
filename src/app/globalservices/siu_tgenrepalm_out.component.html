@@ -1,6 +1,8 @@
 ﻿<form novalidate>
     <h2 class="title">{{title}}</h2>
-        <a (click)="onDownloadoaFichero()">{{oaNombreFichero.value}}</a>        
+    <div class="siuRegion" [ngClass]="cssClasses">
+            <a (click)="onDownloadoaFichero()">{{oaNombreFichero.value}}</a>        
+    </div>
     <div class="col-12 iiuButtons">
         <button type="button" class="btn btn-danger" (click)="processCancel()">{{langMng.translateText('app_CLOSE', '')}}</button>
     </div>

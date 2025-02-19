@@ -63,7 +63,6 @@ export class GSSIUuTGENFILELEGALIZACOMComponent extends AbstractServiceIU implem
         this.myngOnInit();
     }
 
-
     public override saveChanges(): void {
 
         if (!this.validateInputFields()) {
@@ -132,13 +131,13 @@ export class GSSIUuTGENFILELEGALIZACOMComponent extends AbstractServiceIU implem
 
         		// Vamos colocando los datos en su sitio
 		//		1	Producto
-		if ( !this.util.isNull(sol[this.C_PRODUCTO.replace('.', '-')])){
-			registro[0] = sol[this.C_PRODUCTO.replace('.', '-')]; 
+		if ( !this.util.isNull(sol[this.C_PRODUCTO.replace(new RegExp('[.]', 'g'), '-')])){
+			registro[0] = sol[this.C_PRODUCTO.replace(new RegExp('[.]', 'g'), '-')]; 
 		}
 		
 		//		2	Tipo Contrato	Varchar2	C o F
-		if ( !this.util.isNull(sol[this.C_TIPOCONTRATO.replace('.', '-')])){
-			if (sol[this.C_TIPOCONTRATO.replace('.', '-')] === '1'){
+		if ( !this.util.isNull(sol[this.C_TIPOCONTRATO.replace(new RegExp('[.]', 'g'), '-')])){
+			if (sol[this.C_TIPOCONTRATO.replace(new RegExp('[.]', 'g'), '-')] === 1){
 				registro[1] = 'F';
 			} else{
 				registro[1] = 'C';
@@ -146,13 +145,13 @@ export class GSSIUuTGENFILELEGALIZACOMComponent extends AbstractServiceIU implem
 		}
 
 		//		3	Número de Contrato 	Varchar2	
-		if ( !this.util.isNull(sol[this.C_NUMCONTRATO.replace('.', '-')])){
-			registro[2] = sol[this.C_NUMCONTRATO.replace('.', '-')]; 
+		if ( !this.util.isNull(sol[this.C_NUMCONTRATO.replace(new RegExp('[.]', 'g'), '-')])){
+			registro[2] = sol[this.C_NUMCONTRATO.replace(new RegExp('[.]', 'g'), '-')]; 
 		}
 
 		//		4	Número de Familia	Varchar2	
-		if ( !this.util.isNull(sol[this.C_NUMFAMILIA.replace('.', '-')])){
-			registro[3] = sol[this.C_NUMFAMILIA.replace('.', '-')]; 
+		if ( !this.util.isNull(sol[this.C_NUMFAMILIA.replace(new RegExp('[.]', 'g'), '-')])){
+			registro[3] = sol[this.C_NUMFAMILIA.replace(new RegExp('[.]', 'g'), '-')]; 
 		}
 
 		//		5	Código de Novedad	Número	Siempre debe ir 2044
@@ -161,13 +160,13 @@ export class GSSIUuTGENFILELEGALIZACOMComponent extends AbstractServiceIU implem
 		registro[5] = '2050'; 
 		
 		//		7	Numero de Solicitud de la Novedad	Varchar2	
-		if ( !this.util.isNull(sol[this.C_NUMRADICADO.replace('.', '-')])){
-			registro[6] = sol[this.C_NUMRADICADO.replace('.', '-')]; 
+		if ( !this.util.isNull(sol[this.C_NUMRADICADO.replace(new RegExp('[.]', 'g'), '-')])){
+			registro[6] = sol[this.C_NUMRADICADO.replace(new RegExp('[.]', 'g'), '-')]; 
 		}
 
 		//		8	Fecha de Solicitud	Fecha	formato de la fecha (ddmmaaaa)
 		//		9	Fecha de Radicación	Fecha	formato de la fecha (ddmmaaaa) 
-        const fesolici = this.util.getDate(sol[this.C_FESOLICI.replace('.', '-')]);
+        const fesolici = this.util.getDate(sol[this.C_FESOLICI.replace(new RegExp('[.]', 'g'), '-')]);
 		if (fesolici != null){
 			registro[7] = formatDate( fesolici, 'ddMMyyyy', this.langMng.getLanguageId());
 			registro[8] = formatDate( fesolici, 'ddMMyyyy', this.langMng.getLanguageId());
@@ -175,9 +174,9 @@ export class GSSIUuTGENFILELEGALIZACOMComponent extends AbstractServiceIU implem
 		
 		//		10	Numero de Radicación	Varchar2	Es el mismo número de solicitud
 		//		11	Numero de Guia	Varchar2	Es el mismo número de solicitud
-		if ( !this.util.isNull(sol[this.C_NUMRADICADO.replace('.', '-')])) {
-			registro[9] = sol[this.C_NUMRADICADO.replace('.', '-')];
-			registro[10] = sol[this.C_NUMRADICADO.replace('.', '-')];
+		if ( !this.util.isNull(sol[this.C_NUMRADICADO.replace(new RegExp('[.]', 'g'), '-')])) {
+			registro[9] = sol[this.C_NUMRADICADO.replace(new RegExp('[.]', 'g'), '-')];
+			registro[10] = sol[this.C_NUMRADICADO.replace(new RegExp('[.]', 'g'), '-')];
 		}
 		
 		//		12	Fecha de Guia	Fecha	formato de la fecha (ddmmaaaa) 
@@ -186,8 +185,8 @@ export class GSSIUuTGENFILELEGALIZACOMComponent extends AbstractServiceIU implem
 		}
 
 		//		13	Sucursal de Radicación	Número	codigo legal de la Sucursales de Radicación asociada a la solicitud
-		if ( !this.util.isNull(sol[this.C_CODSUCURSAL.replace('.', '-')])) {
-			registro[12] = sol[this.C_CODSUCURSAL.replace('.', '-')]; 
+		if ( !this.util.isNull(sol[this.C_CODSUCURSAL.replace(new RegExp('[.]', 'g'), '-')])) {
+			registro[12] = sol[this.C_CODSUCURSAL.replace(new RegExp('[.]', 'g'), '-')]; 
 		}
 
 		//		15	Fecha de Efecto de la novedad
