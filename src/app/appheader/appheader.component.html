@@ -28,6 +28,10 @@
                     <a class="nav-link" 
                         (click)="navigateFromHat('4')">{{langMng.translateText('_fixed.hat.4', 'Generar')}}</a>
                 </li>
+                <li class="nav-item" *ngIf="isNodeVisible('Vis_1729184268288122NodoJer_8',['Admin','SuperAdmin','Asesor'])">
+                    <a class="nav-link" 
+                        (click)="navigateFromHat('5')">{{langMng.translateText('_fixed.hat.5', 'Reactivación de contratos cancelados')}}</a>
+                </li>
             </ul>
 		
             <ul class="nav navbar-nav" *ngIf="loginVisible()">

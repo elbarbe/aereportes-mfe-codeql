@@ -798,6 +798,10 @@ export class Configuration {
                     navKey: 'siu_tgenfilelegalizacom' }
                 , { name: ModelConstants.Globalservices.siuutgenfilelegalizacomuout,
                     navKey: 'siu_tgenfilelegalizacom_out' }
+                , { name: ModelConstants.Globalservices.siuutgdummygdc27u1,
+                    navKey: 'siu_tgdummygdc27_1' }
+                , { name: ModelConstants.Globalservices.siuutgdummygdc27u1uout,
+                    navKey: 'siu_tgdummygdc27_1_out' }
                 , { name: ModelConstants.Globalservices.siuuogetreportsol,
                     navKey: 'siu_ogetreportsol' }
                 , { name: ModelConstants.Globalservices.siuuogetreportsoluout,

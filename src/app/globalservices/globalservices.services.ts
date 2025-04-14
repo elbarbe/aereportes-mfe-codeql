@@ -10,6 +10,7 @@ import { JsonUtility } from '../common/jsonUtility';
 export class GlobalServicesServices extends AbstractServices {
 
     private tGENFILELEGALIZACOMSrvName = 'TGENFILELEGALIZACOM';
+    private tGDUMMYGDC27u1SrvName = 'TGDUMMYGDC27_1';
     private oGETREPORTSOLSrvName = 'OGETREPORTSOL';
     private oGETREPORTSOLNOVSrvName = 'OGETREPORTSOLNOV';
     private tGENREPALMSrvName = 'TGENREPALM';
@@ -49,6 +50,30 @@ export class GlobalServicesServices extends AbstractServices {
                     ps_archivoresultado: response.ps_archivoresultado,
                     ps_nombrearchivoresultado: response.ps_nombrearchivoresultado,
                     ps_resultado: response.ps_resultado
+                });
+            }).catch( (errorInfo: ErrorInformation) => {
+                reject(errorInfo);
+            });
+        });
+    }
+
+    /**
+     * Call to the service 'TGDUMMYGDC27_1' in the backend
+     * Promise is resolved if service execution is successful and returns its outbound arguments in a JSON object.
+     * If service fails, promise is rejected and returned an instance of ErrorInformation
+     */
+    public tGDUMMYGDC27u1(
+        ):
+        Promise<ErrorInformation | {
+            oaurl: string
+        }> {
+        const request = {};
+        return new Promise<ErrorInformation | {
+            oaurl: string
+        }> ((resolve, reject) => {
+            this.callService(this.tGDUMMYGDC27u1SrvName, request).then((response: any) => {
+                resolve({
+                    oaurl: response.oaurl
                 });
             }).catch( (errorInfo: ErrorInformation) => {
                 reject(errorInfo);

@@ -78,7 +78,7 @@ export class GSSIUuTGENREPALMComponent extends AbstractServiceIU implements OnIn
 
         this.setShowWait(true);
 
-        const filter = this.util.getFilterByRelated('', oidReporte)
+        const filter = this.util.getFilterByRelated('Reporte', oidReporte)
         const query = this.util.getQueryRequest('esnumerico,titulo',[filter], 'OC_Orden', 0);
 
         // Buscamos los parámetros del reporte

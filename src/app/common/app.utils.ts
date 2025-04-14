@@ -1713,6 +1713,7 @@ export class Util {
                                 errorInfo.messageParts.push(startTime.toLocaleString());
                             } else {
                                 errorInfo.messageId = 'app_BACKENDUNKNOWNERROR';
+                                errorInfo.message = this.langMng.translateError(errorInfo);
                             }
                             reject(errorInfo);
                         }

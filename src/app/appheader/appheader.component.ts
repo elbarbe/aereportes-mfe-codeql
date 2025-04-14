@@ -73,6 +73,9 @@ export class AppHeaderComponent implements OnInit {
             case '4':
                 this.getExchangeInfoForHatSubNode4(hatIndex, exchInfo);
                 break;
+            case '5':
+                this.getExchangeInfoForHatSubNode5(hatIndex, exchInfo);
+                break;
             default:
         }
         return exchInfo;
@@ -136,6 +139,18 @@ export class AppHeaderComponent implements OnInit {
         if (hatSubNodeIndex === '4') {
             exchInfo.targetClassName = ModelConstants.Globalservices.name;
             exchInfo.targetIUName = ModelConstants.Globalservices.siuutgenrepalm;
+        }
+    }
+
+    /**
+     * Assign the proper values to the exchange information based in the hat index
+     * @param hatSubNodeIndex Hat index
+     * @param exchInfo Exchange information
+     */
+    private getExchangeInfoForHatSubNode5(hatSubNodeIndex: string, exchInfo: ExchangeInfo): void {
+        if (hatSubNodeIndex === '5') {
+            exchInfo.targetClassName = ModelConstants.Globalservices.name;
+            exchInfo.targetIUName = ModelConstants.Globalservices.siuutgdummygdc27u1;
         }
     }
 
