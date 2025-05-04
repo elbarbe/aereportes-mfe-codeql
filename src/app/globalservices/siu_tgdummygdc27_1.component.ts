@@ -1,4 +1,4 @@
-﻿import { Component, ChangeDetectionStrategy, OnInit, ChangeDetectorRef } from '@angular/core';
+import { Component, ChangeDetectionStrategy, OnInit, ChangeDetectorRef } from '@angular/core';
 import { AppGlobalInfo } from '../app.appglobalinfo';
 import { CacheDependencyRules, InstanceCache } from '../common/app.cachedependencyrules';
 import { Field } from '../common/baseIUElements';
@@ -10,6 +10,9 @@ import { StandardFunctions } from '../common/standardFunctions';
 import { LanguageMng } from '../common/languageMng';
 import { ConditionalNavigationMng } from '../common/conditionalNavigationMng';
 
+/**
+ * « Implements global SIU SIU_TGDUMMYGDC27_1 »
+ */
 @Component({
     selector: 'imes-gs-siu-tgdummygdc27-1',
     templateUrl: './siu_tgdummygdc27_1.component.html',

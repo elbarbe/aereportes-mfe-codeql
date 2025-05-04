@@ -1,4 +1,4 @@
-﻿import { Component, ChangeDetectionStrategy, OnInit, ChangeDetectorRef } from '@angular/core';
+import { Component, ChangeDetectionStrategy, OnInit, ChangeDetectorRef } from '@angular/core';
 import { AppGlobalInfo } from '../app.appglobalinfo';
 import { Util } from '../common/app.utils';
 import { DisplaySetItem } from '../common/queryIUElements';
@@ -10,6 +10,9 @@ import { LanguageMng } from '../common/languageMng';
 import { StandardFunctions } from '../common/standardFunctions';
 import { ConditionalNavigationMng } from '../common/conditionalNavigationMng';
 
+/**
+ * « Implements PIU PIU_Radicados_Obs of Solicitud »
+ */
 @Component({
     selector: 'imes-solicitud-piu-radicados-obs',
     templateUrl: './piu_radicados_obs.component.html',
