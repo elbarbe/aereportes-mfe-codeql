@@ -118,7 +118,7 @@ export class UsuarioPIUuUsuariosPolInternacionalComponent extends AbstractPIU im
         dsItem.alias = this.langMng.translateText(
             'cls_Usuario_ds_DS_UsuarioPolizaInter_item_Clas_1432633737216826CjtoVis_4ICtjoVis_4',
             this.dssolicituddcontratocdnumcontrato);
-        dsItem.agents = [];
+        dsItem.agents = [ModelConstants.Admin.name, ModelConstants.Superadmin.name, ModelConstants.Asesor.name];
         this.displaySet.push(dsItem);
 
         dsItem = new DisplaySetItem();

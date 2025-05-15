@@ -9,6 +9,7 @@ import { Util } from '../common/app.utils';
 import { StandardFunctions } from '../common/standardFunctions';
 import { LanguageMng } from '../common/languageMng';
 import { ConditionalNavigationMng } from '../common/conditionalNavigationMng';
+import { ErrorInformation } from '../common/answerRequestInformation';
 
 /**
  * « Implements global SIU SIU_TGDUMMYGDC27_1 »
@@ -43,12 +44,33 @@ export class GSSIUuTGDUMMYGDC27u1Component extends AbstractServiceIU implements 
         this.serviceName = 'TGDUMMYGDC27_1';
         this.title = this.langMng.translateText('gs_TGDUMMYGDC27_1',
             'Reactivación de contratos cancelados');
+        this.noShow = true;
 
         // Create inbound argument components
     }
 
     public ngOnInit(): void {
         this.myngOnInit();
+    }
+
+    public override executeService(request: any) {
+
+        this.util.callHttpPost(`${this.appGlobalInfo.APPCONSTANTS.BASE_URL}/api/${this.className}Api/${this.serviceName}`,
+                                request).then(
+            (response: any) => {
+                this.setShowWait(false);
+                if (response.resultCode !== '000' && response.resultCode !== '') {
+                    this.util.addErrorMessage(response.resultDescription);
+                    this.processCancel(true);
+                } else {
+                    this.processOutboundArguments(request, response);
+                }
+                this.changeDetectorRef.markForCheck();
+            }, (errResponse: ErrorInformation) => {
+                this.util.addErrorMessage(this.util.translateError(errResponse));
+                this.processCancel(true);
+                this.changeDetectorRef.markForCheck();
+            });
     }
 
     /**

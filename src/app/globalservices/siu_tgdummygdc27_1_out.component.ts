@@ -87,6 +87,14 @@ export class GSSIUuTGDUMMYGDC27u1uOutComponent  extends AbstractIU implements On
     public initializeFromResponse(): void {
         this.oaURL.value =
             this.serviceResponse[this.oaURL.nameInRequest];
+
+        if (this.oaURL.value) {
+            window.open(this.oaURL.value, '_blank');
+        } else {
+            this.util.addErrorMessage('URL no recibida');
+        }
+
+        this.processCancel(true);
     }
 
     /**
