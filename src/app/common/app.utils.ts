@@ -1791,7 +1791,13 @@ export class Util {
                         if (res.body && res.body.resultCode === '666') {
                             this.navigateToWrongVersionPage();
                         } else {
-                            resolve(res.body);
+                            if (res.body && res.body.resultCode === '777') {
+                                // Sesion abierta en otro dispositivo
+                                this.appGlobalInfo.setLogOut();
+                                reject( new ErrorInformation(false, '', '','', []) );
+                            } else {
+                                resolve(res.body);
+                            }
                         }
                     },
                     error: (msg: any) => {
