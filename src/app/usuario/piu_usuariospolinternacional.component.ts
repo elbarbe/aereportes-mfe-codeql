@@ -48,8 +48,13 @@ export class UsuarioPIUuUsuariosPolInternacionalComponent extends AbstractPIU im
         super(appGlobalInfo, util, changeDetectorRef, langMng, condNavMng);
         this.idXML = 'Clas_1432633737216826UIPobCl_3';
         this.className = ModelConstants.Usuario.name;
+        this.classAlias = this.langMng.translateText('cls_Usuario',
+            'Usuario');
+        this.supplementaryInfoAtt.push('tipoidentificacion.nombrecorto');
+        this.supplementaryInfoAtt.push('numidentificacion');
         this.iuName = ModelConstants.Usuario.piuuusuariospolinternacional;
-        this.setUserVisibility(this.appGlobalInfo.getLoggedUserInfo().isIUVisible(this.idXML, ['Admin', 'SuperAdmin', 'Asesor']));
+        this.setUserVisibility(this.appGlobalInfo.getLoggedUserInfo().isIUVisible(this.idXML, ['Admin', 'SuperAdmin', 'Asesor',
+            'AreaMedica', 'Afiliaciones']));
         this.title = this.langMng.translateText('cls_Usuario_piu_PIU_UsuariosPolInternacional',
             'Usuarios Respaldo global');
         this.f0 = new UsuarioFilterFuUsuariosPolizaInter(this.appGlobalInfo,
@@ -82,7 +87,8 @@ export class UsuarioPIUuUsuariosPolInternacionalComponent extends AbstractPIU im
         dsItem.alias = this.langMng.translateText(
             'cls_Usuario_ds_DS_UsuarioPolizaInter_item_Clas_1432633737216826CjtoVis_4ICtjoVis_1',
             this.dssolicituddaeusolicitudesdproductotddescripcion);
-        dsItem.agents = [ModelConstants.Admin.name, ModelConstants.Superadmin.name, ModelConstants.Asesor.name];
+        dsItem.agents = [ModelConstants.Admin.name, ModelConstants.Superadmin.name, ModelConstants.Asesor.name,
+            ModelConstants.Areamedica.name, ModelConstants.Afiliaciones.name];
         this.displaySet.push(dsItem);
 
         dsItem = new DisplaySetItem();
@@ -94,7 +100,8 @@ export class UsuarioPIUuUsuariosPolInternacionalComponent extends AbstractPIU im
         dsItem.alias = this.langMng.translateText(
             'cls_Usuario_ds_DS_UsuarioPolizaInter_item_Clas_1432633737216826CjtoVis_4ICtjoVis_2',
             this.dssolicituddaeusolicitudesdplantdnombre);
-        dsItem.agents = [ModelConstants.Admin.name, ModelConstants.Superadmin.name, ModelConstants.Asesor.name];
+        dsItem.agents = [ModelConstants.Admin.name, ModelConstants.Superadmin.name, ModelConstants.Asesor.name,
+            ModelConstants.Areamedica.name, ModelConstants.Afiliaciones.name];
         this.displaySet.push(dsItem);
 
         dsItem = new DisplaySetItem();
@@ -106,7 +113,8 @@ export class UsuarioPIUuUsuariosPolInternacionalComponent extends AbstractPIU im
         dsItem.alias = this.langMng.translateText(
             'cls_Usuario_ds_DS_UsuarioPolizaInter_item_Clas_1432633737216826CjtoVis_4ICtjoVis_3',
             this.dssolicituddaeusolicitudesdnumerousolicitud);
-        dsItem.agents = [ModelConstants.Admin.name, ModelConstants.Superadmin.name, ModelConstants.Asesor.name];
+        dsItem.agents = [ModelConstants.Admin.name, ModelConstants.Superadmin.name, ModelConstants.Asesor.name,
+            ModelConstants.Areamedica.name, ModelConstants.Afiliaciones.name];
         this.displaySet.push(dsItem);
 
         dsItem = new DisplaySetItem();
@@ -118,7 +126,8 @@ export class UsuarioPIUuUsuariosPolInternacionalComponent extends AbstractPIU im
         dsItem.alias = this.langMng.translateText(
             'cls_Usuario_ds_DS_UsuarioPolizaInter_item_Clas_1432633737216826CjtoVis_4ICtjoVis_4',
             this.dssolicituddcontratocdnumcontrato);
-        dsItem.agents = [ModelConstants.Admin.name, ModelConstants.Superadmin.name, ModelConstants.Asesor.name];
+        dsItem.agents = [ModelConstants.Admin.name, ModelConstants.Superadmin.name, ModelConstants.Asesor.name,
+            ModelConstants.Areamedica.name, ModelConstants.Afiliaciones.name];
         this.displaySet.push(dsItem);
 
         dsItem = new DisplaySetItem();
@@ -129,7 +138,8 @@ export class UsuarioPIUuUsuariosPolInternacionalComponent extends AbstractPIU im
         dsItem.alias = this.langMng.translateText(
             'cls_Usuario_ds_DS_UsuarioPolizaInter_item_Clas_1432633737216826CjtoVis_4ICtjoVis_7',
             this.dssolicituddestado);
-        dsItem.agents = [ModelConstants.Admin.name, ModelConstants.Superadmin.name, ModelConstants.Asesor.name];
+        dsItem.agents = [ModelConstants.Admin.name, ModelConstants.Superadmin.name, ModelConstants.Asesor.name,
+            ModelConstants.Areamedica.name, ModelConstants.Afiliaciones.name];
         dsItem.options = DefinedSelections.DS_ESTADOSOLICITUD;
         this.displaySet.push(dsItem);
 
@@ -142,7 +152,8 @@ export class UsuarioPIUuUsuariosPolInternacionalComponent extends AbstractPIU im
         dsItem.alias = this.langMng.translateText(
             'cls_Usuario_ds_DS_UsuarioPolizaInter_item_Clas_1432633737216826CjtoVis_4ICtjoVis_5',
             this.dsdrvidentificacion);
-        dsItem.agents = [ModelConstants.Admin.name, ModelConstants.Superadmin.name, ModelConstants.Asesor.name];
+        dsItem.agents = [ModelConstants.Admin.name, ModelConstants.Superadmin.name, ModelConstants.Asesor.name,
+            ModelConstants.Areamedica.name, ModelConstants.Afiliaciones.name];
         this.displaySet.push(dsItem);
 
         dsItem = new DisplaySetItem();
@@ -154,7 +165,8 @@ export class UsuarioPIUuUsuariosPolInternacionalComponent extends AbstractPIU im
         dsItem.alias = this.langMng.translateText(
             'cls_Usuario_ds_DS_UsuarioPolizaInter_item_Clas_1432633737216826CjtoVis_4ICtjoVis_6',
             this.dsdrvnombrecompleto);
-        dsItem.agents = [ModelConstants.Admin.name, ModelConstants.Superadmin.name, ModelConstants.Asesor.name];
+        dsItem.agents = [ModelConstants.Admin.name, ModelConstants.Superadmin.name, ModelConstants.Asesor.name,
+            ModelConstants.Areamedica.name, ModelConstants.Afiliaciones.name];
         this.displaySet.push(dsItem);
     }
 

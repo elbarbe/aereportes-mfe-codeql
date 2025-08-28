@@ -41,7 +41,7 @@ export class GSSIUuOGETREPORTSOLComponent extends AbstractServiceIU implements O
         this.className = ModelConstants.Globalservices.name;
         this.iuName = ModelConstants.Globalservices.siuuogetreportsol;
         this.setUserVisibility(this.appGlobalInfo.getLoggedUserInfo().isIUVisible(this.idXML, ['Funcionario', 'Admin', 'SuperAdmin',
-            'Asesor']));
+            'Asesor', 'Afiliaciones', 'AreaMedica']));
         this.serviceName = 'OGETREPORTSOL';
         this.title = this.langMng.translateText('gs_OGETREPORTSOL',
             'Ver PDF');

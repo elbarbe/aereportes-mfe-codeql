@@ -41,7 +41,7 @@ export class GSSIUuOGETREPORTSOLNOVComponent extends AbstractServiceIU implement
         this.className = ModelConstants.Globalservices.name;
         this.iuName = ModelConstants.Globalservices.siuuogetreportsolnov;
         this.setUserVisibility(this.appGlobalInfo.getLoggedUserInfo().isIUVisible(this.idXML, ['Funcionario', 'Admin', 'SuperAdmin',
-            'Asesor']));
+            'Asesor', 'Afiliaciones', 'AreaMedica']));
         this.serviceName = 'OGETREPORTSOLNOV';
         this.title = this.langMng.translateText('gs_OGETREPORTSOLNOV',
             'Ver PDF');

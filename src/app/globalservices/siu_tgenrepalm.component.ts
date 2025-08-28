@@ -45,7 +45,8 @@ export class GSSIUuTGENREPALMComponent extends AbstractServiceIU implements OnIn
         this.idXML = 'IGl_1730192080896609UIServ_1';
         this.className = ModelConstants.Globalservices.name;
         this.iuName = ModelConstants.Globalservices.siuutgenrepalm;
-        this.setUserVisibility(this.appGlobalInfo.getLoggedUserInfo().isIUVisible(this.idXML, ['Admin', 'SuperAdmin', 'Asesor']));
+        this.setUserVisibility(this.appGlobalInfo.getLoggedUserInfo().isIUVisible(this.idXML, ['Admin', 'SuperAdmin', 'Asesor',
+            'Afiliaciones']));
         this.serviceName = 'TGENREPALM';
         this.title = this.langMng.translateText('gs_TGENREPALM',
             'Generar');

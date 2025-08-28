@@ -52,7 +52,8 @@ export class GSSIUuTGENFILELEGALIZACOMComponent extends AbstractServiceIU implem
         this.idXML = 'IGl_1436549251072158UIServ_1';
         this.className = ModelConstants.Globalservices.name;
         this.iuName = ModelConstants.Globalservices.siuutgenfilelegalizacom;
-        this.setUserVisibility(this.appGlobalInfo.getLoggedUserInfo().isIUVisible(this.idXML, ['Admin', 'SuperAdmin']));
+        this.setUserVisibility(this.appGlobalInfo.getLoggedUserInfo().isIUVisible(this.idXML, ['Admin', 'SuperAdmin',
+            'Afiliaciones']));
         this.serviceName = 'TGENFILELEGALIZACOM';
         this.title = this.langMng.translateText('gs_TGENFILELEGALIZACOM',
             'Generación archivo legaliza comisiones');

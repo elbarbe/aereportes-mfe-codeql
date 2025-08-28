@@ -45,8 +45,12 @@ export class SolicitudPIUuRadicadosuObsComponent extends AbstractPIU implements 
         super(appGlobalInfo, util, changeDetectorRef, langMng, condNavMng);
         this.idXML = 'Clas_1431957012480960UIPobCl_1';
         this.className = ModelConstants.Solicitud.name;
+        this.classAlias = this.langMng.translateText('cls_Solicitud',
+            'Solicitud');
+        this.supplementaryInfoAtt.push('ae_solicitudes.numero_solicitud');
         this.iuName = ModelConstants.Solicitud.piuuradicadosuobs;
-        this.setUserVisibility(this.appGlobalInfo.getLoggedUserInfo().isIUVisible(this.idXML, ['Admin', 'SuperAdmin', 'Asesor']));
+        this.setUserVisibility(this.appGlobalInfo.getLoggedUserInfo().isIUVisible(this.idXML, ['Admin', 'SuperAdmin', 'Asesor',
+            'AreaMedica', 'Afiliaciones', 'Funcionario']));
         this.title = this.langMng.translateText('cls_Solicitud_piu_PIU_Radicados_Obs',
             'Radicados');
         this.queryURL = '/api/SolicitudApi/GetPopulationDynamic';
@@ -75,7 +79,8 @@ export class SolicitudPIUuRadicadosuObsComponent extends AbstractPIU implements 
         dsItem.alias = this.langMng.translateText(
             'cls_Solicitud_ds_DS_Solicitud_PIURadicado_item_Clas_1431957012480960CjtoVis_1ICtjoVis_1',
             this.dsaeusolicitudesdnumerousolicitud);
-        dsItem.agents = [ModelConstants.Admin.name, ModelConstants.Superadmin.name, ModelConstants.Asesor.name];
+        dsItem.agents = [ModelConstants.Admin.name, ModelConstants.Superadmin.name, ModelConstants.Asesor.name,
+            ModelConstants.Areamedica.name, ModelConstants.Afiliaciones.name];
         this.displaySet.push(dsItem);
 
         dsItem = new DisplaySetItem();
@@ -87,7 +92,8 @@ export class SolicitudPIUuRadicadosuObsComponent extends AbstractPIU implements 
         dsItem.alias = this.langMng.translateText(
             'cls_Solicitud_ds_DS_Solicitud_PIURadicado_item_Clas_1431957012480960CjtoVis_1ICtjoVis_2',
             this.dsaeusolicitudesdproductotddescripcion);
-        dsItem.agents = [ModelConstants.Admin.name, ModelConstants.Superadmin.name, ModelConstants.Asesor.name];
+        dsItem.agents = [ModelConstants.Admin.name, ModelConstants.Superadmin.name, ModelConstants.Asesor.name,
+            ModelConstants.Areamedica.name, ModelConstants.Afiliaciones.name];
         this.displaySet.push(dsItem);
 
         dsItem = new DisplaySetItem();
@@ -99,7 +105,8 @@ export class SolicitudPIUuRadicadosuObsComponent extends AbstractPIU implements 
         dsItem.alias = this.langMng.translateText(
             'cls_Solicitud_ds_DS_Solicitud_PIURadicado_item_Clas_1431957012480960CjtoVis_1ICtjoVis_3',
             this.dsaeusolicitudesdplantdnombre);
-        dsItem.agents = [ModelConstants.Admin.name, ModelConstants.Superadmin.name, ModelConstants.Asesor.name];
+        dsItem.agents = [ModelConstants.Admin.name, ModelConstants.Superadmin.name, ModelConstants.Asesor.name,
+            ModelConstants.Areamedica.name, ModelConstants.Afiliaciones.name];
         this.displaySet.push(dsItem);
 
         dsItem = new DisplaySetItem();
@@ -110,7 +117,8 @@ export class SolicitudPIUuRadicadosuObsComponent extends AbstractPIU implements 
         dsItem.alias = this.langMng.translateText(
             'cls_Solicitud_ds_DS_Solicitud_PIURadicado_item_Clas_1431957012480960CjtoVis_1ICtjoVis_4',
             this.dstramite);
-        dsItem.agents = [ModelConstants.Admin.name, ModelConstants.Superadmin.name, ModelConstants.Asesor.name];
+        dsItem.agents = [ModelConstants.Admin.name, ModelConstants.Superadmin.name, ModelConstants.Asesor.name,
+            ModelConstants.Areamedica.name, ModelConstants.Afiliaciones.name];
         dsItem.options = DefinedSelections.DS_TRAMITE;
         this.displaySet.push(dsItem);
 
@@ -122,7 +130,8 @@ export class SolicitudPIUuRadicadosuObsComponent extends AbstractPIU implements 
         dsItem.alias = this.langMng.translateText(
             'cls_Solicitud_ds_DS_Solicitud_PIURadicado_item_Clas_1431957012480960CjtoVis_1ICtjoVis_15',
             this.dsaeusolicitudesdfechauasignacion);
-        dsItem.agents = [ModelConstants.Admin.name, ModelConstants.Superadmin.name, ModelConstants.Asesor.name];
+        dsItem.agents = [ModelConstants.Admin.name, ModelConstants.Superadmin.name, ModelConstants.Asesor.name,
+            ModelConstants.Areamedica.name, ModelConstants.Afiliaciones.name];
         this.displaySet.push(dsItem);
 
         dsItem = new DisplaySetItem();
@@ -133,7 +142,8 @@ export class SolicitudPIUuRadicadosuObsComponent extends AbstractPIU implements 
         dsItem.alias = this.langMng.translateText(
             'cls_Solicitud_ds_DS_Solicitud_PIURadicado_item_Clas_1431957012480960CjtoVis_1ICtjoVis_5',
             this.dsnumradicado);
-        dsItem.agents = [ModelConstants.Admin.name, ModelConstants.Superadmin.name, ModelConstants.Asesor.name];
+        dsItem.agents = [ModelConstants.Funcionario.name, ModelConstants.Admin.name, ModelConstants.Superadmin.name,
+            ModelConstants.Asesor.name, ModelConstants.Afiliaciones.name, ModelConstants.Areamedica.name];
         this.displaySet.push(dsItem);
 
         dsItem = new DisplaySetItem();

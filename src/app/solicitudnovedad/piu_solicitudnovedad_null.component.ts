@@ -37,6 +37,9 @@ export class SolicitudNovedadPIUuSolicitudNovedaduNullComponent extends Abstract
         super(appGlobalInfo, util, changeDetectorRef, langMng, condNavMng);
         this.idXML = 'Clas_1581421428736234UIPobCl_7';
         this.className = ModelConstants.Solicitudnovedad.name;
+        this.classAlias = this.langMng.translateText('cls_SolicitudNovedad',
+            'Solicitud de Novedad');
+        this.supplementaryInfoAtt.push('drvnumradicadostr');
         this.iuName = ModelConstants.Solicitudnovedad.piuusolicitudnovedadunull;
         this.setUserVisibility(this.appGlobalInfo.getLoggedUserInfo().isIUVisible(this.idXML, []));
         this.title = this.langMng.translateText('cls_SolicitudNovedad_piu_PIU_SolicitudNovedad_Null',
