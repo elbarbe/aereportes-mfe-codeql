@@ -143,7 +143,7 @@ export class SolicitudPIUuRadicadosuObsComponent extends AbstractPIU implements 
             'cls_Solicitud_ds_DS_Solicitud_PIURadicado_item_Clas_1431957012480960CjtoVis_1ICtjoVis_5',
             this.dsnumradicado);
         dsItem.agents = [ModelConstants.Funcionario.name, ModelConstants.Admin.name, ModelConstants.Superadmin.name,
-            ModelConstants.Asesor.name, ModelConstants.Afiliaciones.name, ModelConstants.Areamedica.name];
+            ModelConstants.Asesor.name, ModelConstants.Areamedica.name, ModelConstants.Afiliaciones.name];
         this.displaySet.push(dsItem);
 
         dsItem = new DisplaySetItem();
