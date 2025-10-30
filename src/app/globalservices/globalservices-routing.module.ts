@@ -4,8 +4,7 @@ import { PopStateNavigationGuard } from '../common/popStateNavigationGuard';
 import { LoginGuard } from '../common/loginGuard';
 import { GSSIUuTGENFILELEGALIZACOMComponent } from './siu_tgenfilelegalizacom.component';
 import { GSSIUuTGENFILELEGALIZACOMuOutComponent } from './siu_tgenfilelegalizacom_out.component';
-import { GSSIUuTGDUMMYGDC27u1Component } from './siu_tgdummygdc27_1.component';
-import { GSSIUuTGDUMMYGDC27u1uOutComponent } from './siu_tgdummygdc27_1_out.component';
+import { GSSIUuREACTIVACIONCONTRATOSComponent } from './siu_reactivacioncontratos.component';
 import { GSSIUuOGETREPORTSOLComponent } from './siu_ogetreportsol.component';
 import { GSSIUuOGETREPORTSOLuOutComponent } from './siu_ogetreportsol_out.component';
 import { GSSIUuOGETREPORTSOLNOVComponent } from './siu_ogetreportsolnov.component';
@@ -18,9 +17,7 @@ const routes: Routes = [
         canActivate: [LoginGuard], canDeactivate: [PopStateNavigationGuard] },
     { path: 'siu_tgenfilelegalizacom_out' , component: GSSIUuTGENFILELEGALIZACOMuOutComponent,
         canActivate: [LoginGuard], canDeactivate: [PopStateNavigationGuard] },
-    { path: 'siu_tgdummygdc27_1' , component: GSSIUuTGDUMMYGDC27u1Component,
-        canActivate: [LoginGuard], canDeactivate: [PopStateNavigationGuard] },
-    { path: 'siu_tgdummygdc27_1_out' , component: GSSIUuTGDUMMYGDC27u1uOutComponent,
+    { path: 'siu_reactivacioncontratos' , component: GSSIUuREACTIVACIONCONTRATOSComponent,
         canActivate: [LoginGuard], canDeactivate: [PopStateNavigationGuard] },
     { path: 'siu_ogetreportsol' , component: GSSIUuOGETREPORTSOLComponent,
         canActivate: [LoginGuard], canDeactivate: [PopStateNavigationGuard] },

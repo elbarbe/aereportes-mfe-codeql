@@ -4,8 +4,7 @@ import { CommonComponentsModule } from '../commoncomponents.module';
 import { GlobalServicesRoutingModule } from './globalservices-routing.module';
 import { GSSIUuTGENFILELEGALIZACOMComponent } from './siu_tgenfilelegalizacom.component';
 import { GSSIUuTGENFILELEGALIZACOMuOutComponent } from './siu_tgenfilelegalizacom_out.component';
-import { GSSIUuTGDUMMYGDC27u1Component } from './siu_tgdummygdc27_1.component';
-import { GSSIUuTGDUMMYGDC27u1uOutComponent } from './siu_tgdummygdc27_1_out.component';
+import { GSSIUuREACTIVACIONCONTRATOSComponent } from './siu_reactivacioncontratos.component';
 import { GSSIUuOGETREPORTSOLComponent } from './siu_ogetreportsol.component';
 import { GSSIUuOGETREPORTSOLuOutComponent } from './siu_ogetreportsol_out.component';
 import { GSSIUuOGETREPORTSOLNOVComponent } from './siu_ogetreportsolnov.component';
@@ -22,8 +21,7 @@ import { GSSIUuTGENREPALMuOutComponent } from './siu_tgenrepalm_out.component';
   declarations: [
     GSSIUuTGENFILELEGALIZACOMComponent,
     GSSIUuTGENFILELEGALIZACOMuOutComponent,
-    GSSIUuTGDUMMYGDC27u1Component,
-    GSSIUuTGDUMMYGDC27u1uOutComponent,
+    GSSIUuREACTIVACIONCONTRATOSComponent,
     GSSIUuOGETREPORTSOLComponent,
     GSSIUuOGETREPORTSOLuOutComponent,
     GSSIUuOGETREPORTSOLNOVComponent,
@@ -34,8 +32,7 @@ import { GSSIUuTGENREPALMuOutComponent } from './siu_tgenrepalm_out.component';
   exports: [
     GSSIUuTGENFILELEGALIZACOMComponent,
     GSSIUuTGENFILELEGALIZACOMuOutComponent,
-    GSSIUuTGDUMMYGDC27u1Component,
-    GSSIUuTGDUMMYGDC27u1uOutComponent,
+    GSSIUuREACTIVACIONCONTRATOSComponent,
     GSSIUuOGETREPORTSOLComponent,
     GSSIUuOGETREPORTSOLuOutComponent,
     GSSIUuOGETREPORTSOLNOVComponent,

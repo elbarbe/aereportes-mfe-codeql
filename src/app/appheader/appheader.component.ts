@@ -153,7 +153,7 @@ export class AppHeaderComponent implements OnInit {
     private getExchangeInfoForHatSubNode5(hatSubNodeIndex: string, exchInfo: ExchangeInfo): void {
         if (hatSubNodeIndex === '5') {
             exchInfo.targetClassName = ModelConstants.Globalservices.name;
-            exchInfo.targetIUName = ModelConstants.Globalservices.siuutgdummygdc27u1;
+            exchInfo.targetIUName = ModelConstants.Globalservices.siuureactivacioncontratos;
         }
     }
 

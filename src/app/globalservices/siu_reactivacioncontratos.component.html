@@ -1,0 +1,19 @@
+<waitDialog [showWait]="showWait"></waitDialog> 
+<form novalidate>
+    <ng-container *ngIf="visible">
+        <h2 class="title">{{title}}</h2>
+        <div class="siuRegion" [ngClass]="cssClasses">
+            <imes-input-definedselection [field]="ptCompanyia" *ngIf="ptCompanyia.visible" (valueChanged)="onptcompanyiaChange()"></imes-input-definedselection>
+            <imes-input-definedselection [field]="ptPlan" *ngIf="ptPlan.visible"></imes-input-definedselection>
+            <imes-input-string [field]="ptContrato" *ngIf="ptContrato.visible" (valueChanged)="onContratoChange()"></imes-input-string>
+            <imes-input-string [field]="ptTitular" *ngIf="ptTitular.visible"></imes-input-string>
+            <imes-input-numeric [field]="ptValor" *ngIf="ptValor.visible"></imes-input-numeric>
+        </div>
+        <div class="col-12 siuButtons" style="padding-left: 0px!important;margin-top: 50px;">
+            <button type="button" class="btnOk btn btn-primary" (click)="consultar()">Consultar</button>
+            <button type="button" [disabled]="!guardarHabilitado" class="btnOk btn btn-primary" (click)="guardar()">Guardar</button>
+            <button type="button" [disabled]="!eliminarHabilitado" class="btnOk btn btn-primary" (click)="eliminar()">Eliminar</button>
+            <button type="button" class="btnCancel btn btn-danger" style="margin-left: 50px;" (click)="processCancel()">Cerrar</button>
+        </div>
+    </ng-container>
+</form>

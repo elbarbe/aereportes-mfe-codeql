@@ -9,7 +9,7 @@ module.exports = (config, options) => {
     systemjsModuleName: "@ae/aereportes"
   }));
 
-  singleSpaWebpackConfig.output.filename = 'aereportes.20.0.0.js';
+  singleSpaWebpackConfig.output.filename = 'aereportes.21.0.0.js';
 
   // Feel free to modify this webpack config however you'd like to
   return singleSpaWebpackConfig;

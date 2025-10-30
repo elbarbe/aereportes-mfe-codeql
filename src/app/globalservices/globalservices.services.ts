@@ -10,7 +10,7 @@ import { JsonUtility } from '../common/jsonUtility';
 export class GlobalServicesServices extends AbstractServices {
 
     private tGENFILELEGALIZACOMSrvName = 'TGENFILELEGALIZACOM';
-    private tGDUMMYGDC27u1SrvName = 'TGDUMMYGDC27_1';
+    private rEACTIVACIONCONTRATOSSrvName = 'REACTIVACIONCONTRATOS';
     private oGETREPORTSOLSrvName = 'OGETREPORTSOL';
     private oGETREPORTSOLNOVSrvName = 'OGETREPORTSOLNOV';
     private tGENREPALMSrvName = 'TGENREPALM';
@@ -58,23 +58,27 @@ export class GlobalServicesServices extends AbstractServices {
     }
 
     /**
-     * Call to the service 'TGDUMMYGDC27_1' in the backend
-     * Promise is resolved if service execution is successful and returns its outbound arguments in a JSON object.
+     * Call to the service 'REACTIVACIONCONTRATOS' in the backend
+     * Promise is resolved if service execution is successful and returns void.
      * If service fails, promise is rejected and returned an instance of ErrorInformation
+     * @param ptCompanyiaInArg Optional argument 'ptCompanyia'
+     * @param ptPlanInArg Optional argument 'ptPlan'
+     * @param ptContratoInArg Optional argument 'ptContrato'
+     * @param ptTitularInArg Optional argument 'ptTitular'
+     * @param ptValorInArg Optional argument 'ptValor'
      */
-    public tGDUMMYGDC27u1(
-        ):
-        Promise<ErrorInformation | {
-            oaurl: string
-        }> {
-        const request = {};
-        return new Promise<ErrorInformation | {
-            oaurl: string
-        }> ((resolve, reject) => {
-            this.callService(this.tGDUMMYGDC27u1SrvName, request).then((response: any) => {
-                resolve({
-                    oaurl: response.oaurl
-                });
+    public rEACTIVACIONCONTRATOS(
+        ptCompanyiaInArg: string, ptPlanInArg: string, ptContratoInArg: string, ptTitularInArg: string,
+        ptValorInArg: number): Promise<ErrorInformation | void> {
+        const request: {
+            ptcompanyia: string, ptplan: string, ptcontrato: string, pttitular: string, ptvalor: number
+        } = {
+            ptcompanyia: ptCompanyiaInArg, ptplan: ptPlanInArg, ptcontrato: ptContratoInArg, pttitular: ptTitularInArg,
+            ptvalor: ptValorInArg
+        };
+        return new Promise<ErrorInformation | void> ((resolve, reject) => {
+             this.callService(this.rEACTIVACIONCONTRATOSSrvName, request).then((response: any) => {
+                resolve();
             }).catch( (errorInfo: ErrorInformation) => {
                 reject(errorInfo);
             });

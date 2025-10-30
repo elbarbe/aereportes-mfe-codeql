@@ -133,9 +133,8 @@ export class ModelConstants {
     public static readonly Textoaviso = {name : 'TextoAviso'};
     public static readonly Usuariosistemaexterno = {name : 'UsuarioSistemaExterno'};
     public static readonly Globalservices = {name : 'GlobalServices', siuutgenfilelegalizacom: 'siu_tgenfilelegalizacom',
-        siuutgenfilelegalizacomuout: 'siu_tgenfilelegalizacom_out', siuutgdummygdc27u1: 'siu_tgdummygdc27_1',
-        siuutgdummygdc27u1uout: 'siu_tgdummygdc27_1_out', siuuogetreportsol: 'siu_ogetreportsol',
-        siuuogetreportsoluout: 'siu_ogetreportsol_out', siuuogetreportsolnov: 'siu_ogetreportsolnov',
-        siuuogetreportsolnovuout: 'siu_ogetreportsolnov_out', siuutgenrepalm: 'siu_tgenrepalm',
-        siuutgenrepalmuout: 'siu_tgenrepalm_out'};
+        siuutgenfilelegalizacomuout: 'siu_tgenfilelegalizacom_out', siuureactivacioncontratos: 'siu_reactivacioncontratos',
+        siuuogetreportsol: 'siu_ogetreportsol', siuuogetreportsoluout: 'siu_ogetreportsol_out',
+        siuuogetreportsolnov: 'siu_ogetreportsolnov', siuuogetreportsolnovuout: 'siu_ogetreportsolnov_out',
+        siuutgenrepalm: 'siu_tgenrepalm', siuutgenrepalmuout: 'siu_tgenrepalm_out'};
 }
