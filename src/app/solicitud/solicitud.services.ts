@@ -4,7 +4,7 @@ import { Util } from '../common/app.utils';
 import { QueryResponse } from '../common/answerRequestInformation';
 
 /**
- * Service and queries of class 'Solicitud'
+ * « Service and queries of class 'Solicitud' »
  */
 export class SolicitudServices extends AbstractServices {
 

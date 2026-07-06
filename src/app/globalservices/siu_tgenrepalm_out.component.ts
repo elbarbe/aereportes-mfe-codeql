@@ -27,8 +27,8 @@ export class GSSIUuTGENREPALMuOutComponent  extends AbstractIU implements OnInit
     private serviceRequest: any;
     /** Service response */
     private serviceResponse: any;
-    /** Context */
-    private readonly context: {exchangeInfo: ExchangeInfo} = {exchangeInfo: new ExchangeInfo()};
+    /** Exchange info */
+    private exchangeInfo: ExchangeInfo = new ExchangeInfo();
 
     /**
      * Component constructor
@@ -83,10 +83,10 @@ export class GSSIUuTGENREPALMuOutComponent  extends AbstractIU implements OnInit
         this.oaNombreFichero.assignCSS();
 
         // Get request and response from the exchange information
-        this.context.exchangeInfo = this.appGlobalInfo.appExchangeInfo.getExchangeInfoForScenario(this.className, this.iuName);
-        if (this.context.exchangeInfo) {
-            this.serviceRequest = this.context.exchangeInfo.customData.request;
-            this.serviceResponse = this.context.exchangeInfo.customData.response;
+        this.exchangeInfo = this.appGlobalInfo.appExchangeInfo.getExchangeInfoForScenario(this.className, this.iuName);
+        if (this.exchangeInfo) {
+            this.serviceRequest = this.exchangeInfo.customData.request;
+            this.serviceResponse = this.exchangeInfo.customData.response;
             if (this.serviceRequest && this.serviceResponse) {
                 this.initializeFromResponse();
             }
@@ -104,12 +104,6 @@ export class GSSIUuTGENREPALMuOutComponent  extends AbstractIU implements OnInit
             this.serviceResponse[this.oaNombreFichero.nameInRequest];
     }
 
-    /**
-     * Returns the context information
-     */
-    public override getContext(): any {
-        return this.context;
-    }
 
     /**
      * Save a file with the argument information

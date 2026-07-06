@@ -3,7 +3,7 @@ import { AppGlobalInfo } from '../app.appglobalinfo';
 import { Util } from '../common/app.utils';
 
 /**
- * Service and queries of class 'SolicitudNovedad'
+ * « Service and queries of class 'SolicitudNovedad' »
  */
 export class SolicitudNovedadServices extends AbstractServices {
 

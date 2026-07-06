@@ -67,7 +67,7 @@ export class GSSIUuOGETREPORTSOLNOVComponent extends AbstractServiceIU implement
         this.ptSolicitudNovedad.mandatory = true;
         this.ptSolicitudNovedad.dataType = ModelConstants.Solicitudnovedad.name;
         this.ptSolicitudNovedad.oidFields = Array(1);
-        this.ptSolicitudNovedad.oidFieldsTypes = ['autonumerico'];
+        this.ptSolicitudNovedad.oidFieldsTypes = [Field.dtAuto];
         this.ptSolicitudNovedad.assignCSS();
         this.fields.push(this.ptSolicitudNovedad);
     }
@@ -165,7 +165,7 @@ export class GSSIUuOGETREPORTSOLNOVComponent extends AbstractServiceIU implement
         this.clearValidationMessages();
         let fieldsHasValue = true;
         for (const field of this.ptSolicitudNovedad.oidFields) {
-            if (!field) {
+            if (this.util.isNull(field)) {
                 fieldsHasValue = false;
                 break;
             }
