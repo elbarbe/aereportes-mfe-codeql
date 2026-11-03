@@ -31,8 +31,6 @@ const routes: Routes = [
       loadChildren: () => import('./solicitud/solicitud.module').then(m => m.SolicitudModule) },
     { path: environment.prefix + '/usuario',
       loadChildren: () => import('./usuario/usuario.module').then(m => m.UsuarioModule) },
-    { path: environment.prefix + '/solicitudnovedad',
-      loadChildren: () => import('./solicitudnovedad/solicitudnovedad.module').then(m => m.SolicitudNovedadModule) },
     { path: environment.prefix + '/globalservices',
       loadChildren: () => import('./globalservices/globalservices.module').then(m => m.GlobalServicesModule) },
     { path: '**', component: EmptyRouteComponent }

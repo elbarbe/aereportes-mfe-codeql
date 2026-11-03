@@ -59,27 +59,17 @@ export class AppHeaderComponent implements OnInit {
         exchInfo.exchangeType = 'Action';
         const index = hatIndex.indexOf('_');
         const firstLevel = index > -1 ? hatIndex.substring(0, index) : hatIndex;
-
-        switch (firstLevel) {
-            case '0':
-                this.getExchangeInfoForHatSubNode0(hatIndex, exchInfo);
-                break;
-            case '1':
-                this.getExchangeInfoForHatSubNode1(hatIndex, exchInfo);
-                break;
-            case '2':
-                this.getExchangeInfoForHatSubNode2(hatIndex, exchInfo);
-                break;
-            case '3':
-                this.getExchangeInfoForHatSubNode3(hatIndex, exchInfo);
-                break;
-            case '4':
-                this.getExchangeInfoForHatSubNode4(hatIndex, exchInfo);
-                break;
-            case '5':
-                this.getExchangeInfoForHatSubNode5(hatIndex, exchInfo);
-                break;
-            default:
+        if (firstLevel === '0') {
+            this.getExchangeInfoForHatSubNode0(hatIndex, exchInfo);
+        }
+        if (firstLevel === '1') {
+            this.getExchangeInfoForHatSubNode1(hatIndex, exchInfo);
+        }
+        if (firstLevel === '2') {
+            this.getExchangeInfoForHatSubNode2(hatIndex, exchInfo);
+        }
+        if (firstLevel === '3') {
+            this.getExchangeInfoForHatSubNode3(hatIndex, exchInfo);
         }
         return exchInfo;
     }
@@ -117,7 +107,7 @@ export class AppHeaderComponent implements OnInit {
     private getExchangeInfoForHatSubNode2(hatSubNodeIndex: string, exchInfo: ExchangeInfo): void {
         if (hatSubNodeIndex === '2') {
             exchInfo.targetClassName = ModelConstants.Globalservices.name;
-            exchInfo.targetIUName = ModelConstants.Globalservices.siuuogetreportsol;
+            exchInfo.targetIUName = ModelConstants.Globalservices.siuutgenrepalm;
         }
     }
 
@@ -128,30 +118,6 @@ export class AppHeaderComponent implements OnInit {
      */
     private getExchangeInfoForHatSubNode3(hatSubNodeIndex: string, exchInfo: ExchangeInfo): void {
         if (hatSubNodeIndex === '3') {
-            exchInfo.targetClassName = ModelConstants.Globalservices.name;
-            exchInfo.targetIUName = ModelConstants.Globalservices.siuuogetreportsolnov;
-        }
-    }
-
-    /**
-     * Assign the proper values to the exchange information based in the hat index
-     * @param hatSubNodeIndex Hat index
-     * @param exchInfo Exchange information
-     */
-    private getExchangeInfoForHatSubNode4(hatSubNodeIndex: string, exchInfo: ExchangeInfo): void {
-        if (hatSubNodeIndex === '4') {
-            exchInfo.targetClassName = ModelConstants.Globalservices.name;
-            exchInfo.targetIUName = ModelConstants.Globalservices.siuutgenrepalm;
-        }
-    }
-
-    /**
-     * Assign the proper values to the exchange information based in the hat index
-     * @param hatSubNodeIndex Hat index
-     * @param exchInfo Exchange information
-     */
-    private getExchangeInfoForHatSubNode5(hatSubNodeIndex: string, exchInfo: ExchangeInfo): void {
-        if (hatSubNodeIndex === '5') {
             exchInfo.targetClassName = ModelConstants.Globalservices.name;
             exchInfo.targetIUName = ModelConstants.Globalservices.siuureactivacioncontratos;
         }

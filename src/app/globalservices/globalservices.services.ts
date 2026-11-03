@@ -11,8 +11,6 @@ export class GlobalServicesServices extends AbstractServices {
 
     private tGENFILELEGALIZACOMSrvName = 'TGENFILELEGALIZACOM';
     private rEACTIVACIONCONTRATOSSrvName = 'REACTIVACIONCONTRATOS';
-    private oGETREPORTSOLSrvName = 'OGETREPORTSOL';
-    private oGETREPORTSOLNOVSrvName = 'OGETREPORTSOLNOV';
     private tGENREPALMSrvName = 'TGENREPALM';
 
     constructor(
@@ -79,73 +77,6 @@ export class GlobalServicesServices extends AbstractServices {
         return new Promise<ErrorInformation | void> ((resolve, reject) => {
              this.callService(this.rEACTIVACIONCONTRATOSSrvName, request).then((response: any) => {
                 resolve();
-            }).catch( (errorInfo: ErrorInformation) => {
-                reject(errorInfo);
-            });
-        });
-    }
-
-    /**
-     * Call to the service 'OGETREPORTSOL' in the backend
-     * Promise is resolved if service execution is successful and returns its outbound arguments in a JSON object.
-     * If service fails, promise is rejected and returned an instance of ErrorInformation
-     * @param ptSolicitudInArg Mandatory argument 'ptSolicitud'. Oid of 'Solicitud' class
-     */
-    public oGETREPORTSOL(
-        ptSolicitudInArg: any):
-        Promise<ErrorInformation | {
-            oaarchivo: string,
-            oanombrearchivo: string
-        }> {
-        const request: {
-            ptsolicitud_oid: any
-        } = {
-            ptsolicitud_oid: ptSolicitudInArg
-        };
-        return new Promise<ErrorInformation | {
-            oaarchivo: string,
-            oanombrearchivo: string
-        }> ((resolve, reject) => {
-            this.callService(this.oGETREPORTSOLSrvName, request).then((response: any) => {
-                resolve({
-                    oaarchivo: response.oaarchivo,
-                    oanombrearchivo: response.oanombrearchivo
-                });
-            }).catch( (errorInfo: ErrorInformation) => {
-                reject(errorInfo);
-            });
-        });
-    }
-
-    /**
-     * Call to the service 'OGETREPORTSOLNOV' in the backend
-     * Promise is resolved if service execution is successful and returns its outbound arguments in a JSON object.
-     * If service fails, promise is rejected and returned an instance of ErrorInformation
-     * @param ptSolicitudNovedadInArg Mandatory argument 'ptSolicitudNovedad'. Oid of 'SolicitudNovedad' class
-     */
-    public oGETREPORTSOLNOV(
-        ptSolicitudNovedadInArg: any):
-        Promise<ErrorInformation | {
-            oaruta: string,
-            oanombrearchivo: string,
-            oaarchivo: string
-        }> {
-        const request: {
-            ptsolicitudnovedad_oid: any
-        } = {
-            ptsolicitudnovedad_oid: ptSolicitudNovedadInArg
-        };
-        return new Promise<ErrorInformation | {
-            oaruta: string,
-            oanombrearchivo: string,
-            oaarchivo: string
-        }> ((resolve, reject) => {
-            this.callService(this.oGETREPORTSOLNOVSrvName, request).then((response: any) => {
-                resolve({
-                    oaruta: response.oaruta,
-                    oanombrearchivo: response.oanombrearchivo,
-                    oaarchivo: response.oaarchivo
-                });
             }).catch( (errorInfo: ErrorInformation) => {
                 reject(errorInfo);
             });

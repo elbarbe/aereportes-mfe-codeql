@@ -96,7 +96,7 @@ export class ModelConstants {
     public static readonly Tiponovedad = {name : 'TipoNovedad'};
     public static readonly Novedad = {name : 'Novedad'};
     public static readonly Causal = {name : 'Causal'};
-    public static readonly Solicitudnovedad = {name : 'SolicitudNovedad', piuusolicitudnovedadunull: 'piu_solicitudnovedad_null'};
+    public static readonly Solicitudnovedad = {name : 'SolicitudNovedad'};
     public static readonly Familianovedad = {name : 'FamiliaNovedad'};
     public static readonly Usuarionovedad = {name : 'UsuarioNovedad'};
     public static readonly Causaexclusion = {name : 'CausaExclusion'};
@@ -134,7 +134,5 @@ export class ModelConstants {
     public static readonly Usuariosistemaexterno = {name : 'UsuarioSistemaExterno'};
     public static readonly Globalservices = {name : 'GlobalServices', siuutgenfilelegalizacom: 'siu_tgenfilelegalizacom',
         siuutgenfilelegalizacomuout: 'siu_tgenfilelegalizacom_out', siuureactivacioncontratos: 'siu_reactivacioncontratos',
-        siuuogetreportsol: 'siu_ogetreportsol', siuuogetreportsoluout: 'siu_ogetreportsol_out',
-        siuuogetreportsolnov: 'siu_ogetreportsolnov', siuuogetreportsolnovuout: 'siu_ogetreportsolnov_out',
         siuutgenrepalm: 'siu_tgenrepalm', siuutgenrepalmuout: 'siu_tgenrepalm_out'};
 }

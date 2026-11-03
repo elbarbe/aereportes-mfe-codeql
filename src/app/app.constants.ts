@@ -576,8 +576,6 @@ export class Configuration {
             className: ModelConstants.Solicitudnovedad.name,
             navKey: 'solicitudnovedad',
             ius: [
-                { name: ModelConstants.Solicitudnovedad.piuusolicitudnovedadunull,
-                    navKey: 'piu_solicitudnovedad_null' }
             ]
         }
         , {
@@ -800,14 +798,6 @@ export class Configuration {
                     navKey: 'siu_tgenfilelegalizacom_out' }
                 , { name: ModelConstants.Globalservices.siuureactivacioncontratos,
                     navKey: 'siu_reactivacioncontratos' }
-                , { name: ModelConstants.Globalservices.siuuogetreportsol,
-                    navKey: 'siu_ogetreportsol' }
-                , { name: ModelConstants.Globalservices.siuuogetreportsoluout,
-                    navKey: 'siu_ogetreportsol_out' }
-                , { name: ModelConstants.Globalservices.siuuogetreportsolnov,
-                    navKey: 'siu_ogetreportsolnov' }
-                , { name: ModelConstants.Globalservices.siuuogetreportsolnovuout,
-                    navKey: 'siu_ogetreportsolnov_out' }
                 , { name: ModelConstants.Globalservices.siuutgenrepalm,
                     navKey: 'siu_tgenrepalm' }
                 , { name: ModelConstants.Globalservices.siuutgenrepalmuout,
