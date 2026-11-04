@@ -1,8 +1,6 @@
 import { Injectable } from '@angular/core';
 import { AppGlobalInfo } from '../app.appglobalinfo';
-import { CacheDependencyRules, InstanceCache } from './app.cachedependencyrules';
-import { ExchangeInfo } from './app.exchangeinfo';
-import { ModelConstants } from './model.constants';
+import { CacheDependencyRules } from './app.cachedependencyrules';
 import { Util } from './app.utils';
 import { StandardFunctions } from './standardFunctions';
 

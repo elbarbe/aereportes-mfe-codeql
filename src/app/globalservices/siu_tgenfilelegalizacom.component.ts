@@ -1,9 +1,7 @@
 import { Component, ChangeDetectionStrategy, OnInit, ChangeDetectorRef } from '@angular/core';
 import { AppGlobalInfo } from '../app.appglobalinfo';
-import { CacheDependencyRules, InstanceCache } from '../common/app.cachedependencyrules';
 import { Field } from '../common/baseIUElements';
 import { AbstractServiceIU } from '../common/abstractSIU';
-import { ExchangeInfo } from '../common/app.exchangeinfo';
 import { ModelConstants } from '../common/model.constants';
 import { Util } from '../common/app.utils';
 import { StandardFunctions } from '../common/standardFunctions';
